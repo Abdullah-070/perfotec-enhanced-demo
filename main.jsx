@@ -27,6 +27,17 @@ import {
 } from 'lucide-react'
 import './styles.css'
 
+import berries from './berries.jpg'
+import broccoliIcon from './broccoli-icon.svg'
+import mhlDetail from './mhl-detail.jpg'
+import mhlWide from './mhl-wide.jpg'
+import o2Control from './o2-control.jpg'
+import onlineLaserDetail from './online-laser-detail.jpg'
+import onlineLaser from './online-laser.jpg'
+import perfotecLogo from './perfotec-logo.png'
+import strawberryIcon from './strawberry-icon.svg'
+import tulipIcon from './tulip-icon.svg'
+
 const contact = {
   email: 'info@perfotec.com',
   phone: '+31 (0) 297 255 554',
@@ -43,7 +54,7 @@ const buyerPaths = [
     headline: 'Make every pack work harder.',
     copy: 'Match the atmosphere to the product so quality holds from the first hour after harvest to the retail shelf.',
     outcomes: ['Shelf-life trials', 'Respiration analysis', 'Packaging advice'],
-    image: '/berries.jpg',
+    image: berries,
     labelLine: 'For produce teams',
   },
   {
@@ -53,7 +64,7 @@ const buyerPaths = [
     headline: 'Turn film into a freshness advantage.',
     copy: 'Bring precision perforation and feedback control into your line to create high-performance breathable films.',
     outcomes: ['Multi-head laser', 'Online laser system', 'BOPE film'],
-    image: '/mhl-wide.jpg',
+    image: mhlWide,
     labelLine: 'For packaging innovators',
   },
   {
@@ -63,7 +74,7 @@ const buyerPaths = [
     headline: 'Control the atmosphere around every cut.',
     copy: 'Build a more stable MAP process with measured respiration, gas control, and packaging that fits the product.',
     outcomes: ['O₂Control', 'Fast Respiration Meter', 'Closed-loop feedback'],
-    image: '/o2-control.jpg',
+    image: o2Control,
     labelLine: 'For fresh-cut operations',
   },
   {
@@ -73,7 +84,7 @@ const buyerPaths = [
     headline: 'Protect quality beyond the field.',
     copy: 'Create the right environment for produce during storage and long-distance transport, where small losses compound.',
     outcomes: ['Liners', 'Pallet covers', 'Transport protection'],
-    image: '/online-laser.jpg',
+    image: onlineLaser,
     labelLine: 'For supply-chain teams',
   },
 ]
@@ -85,7 +96,7 @@ const products = [
     title: 'Precision where the line moves fast.',
     copy: 'In-line and multi-head laser systems designed to create consistent micro-perforation, with camera control for real-time verification.',
     specs: [['450 m/min', 'production speed'], ['250 fps', 'camera inspection'], ['2 min', 'changeover'], ['50–200 µm', 'perforation range']],
-    image: '/mhl-detail.jpg',
+    image: mhlDetail,
     source: 'https://www.perfotec.com/multi-head-laser-system',
   },
   {
@@ -94,7 +105,7 @@ const products = [
     title: 'A steadier atmosphere inside every pack.',
     copy: 'O₂Control uses real-time monitoring and adjustment to create precise gas conditions for fresh produce packaging.',
     specs: [['< 0.5%', 'O₂ / N₂ deviation'], ['3 sensors', 'precision control'], ['Live', 'feedback loop'], ['Modular', 'line integration']],
-    image: '/o2-control.jpg',
+    image: o2Control,
     source: 'https://www.perfotec.com/o2control',
   },
   {
@@ -103,7 +114,7 @@ const products = [
     title: 'Start with how the product breathes.',
     copy: 'Measure respiration, design the atmosphere, and use that insight to make a more confident packaging decision.',
     specs: [['01', 'measure'], ['02', 'design'], ['03', 'apply'], ['04', 'protect']],
-    image: '/online-laser-detail.jpg',
+    image: onlineLaserDetail,
     source: 'https://www.perfotec.com/frm',
   },
 ]
@@ -168,7 +179,7 @@ function App() {
     <div className="perfotec-shell">
       <div className="announcement"><span><span className="pulse-dot" /> PerfoTec / Freshness, engineered</span><span className="announcement-right">Measure · Design · Apply · Protect</span></div>
       <header className="site-header">
-        <a className="logo" href="#top" onClick={(event) => { event.preventDefault(); scrollTo('top') }} aria-label="PerfoTec home"><img className="brand-logo" src="/perfotec-logo.png" alt="PerfoTec" /></a>
+        <a className="logo" href="#top" onClick={(event) => { event.preventDefault(); scrollTo('top') }} aria-label="PerfoTec home"><img className="brand-logo" src={perfotecLogo} alt="PerfoTec" /></a>
         <nav className={menuOpen ? 'main-nav open' : 'main-nav'}>
           <button onClick={() => scrollTo('buyer')}>Find your path</button>
           <button onClick={() => scrollTo('solutions')}>Solutions</button>
@@ -207,7 +218,7 @@ function App() {
         <section className="contact section" id="contact"><div className="contact-grid reveal"><div><span className="small-label">06 / Start with your product</span><h2>Let’s find the<br /><em>right atmosphere.</em></h2><p>Tell us what you are growing, packing, converting, or moving. We’ll help you find the right first conversation.</p><button className="button button-light" onClick={() => openContact('I need advice')}>Talk to an expert <ArrowUpRight size={15} /></button></div><div className="contact-details"><div><Mail size={17} /><a href={`mailto:${contact.email}`}>{contact.email}</a></div><div><Phone size={17} /><a href={contact.phoneHref}>{contact.phone}</a></div><div><MapPin size={17} /><span>{contact.address}</span></div><a className="contact-tech" href="https://cdn.prod.website-files.com/68b594c756c22085ddc6c1ea/6a0f05593d1d68c511172a93_PerfoTec.pdf" target="_blank" rel="noreferrer"><ClipboardCheck size={16} /> Download technology overview <ArrowUpRight size={14} /></a></div></div></section>
       </main>
 
-      <footer className="footer"><a className="logo" href="#top" onClick={(event) => { event.preventDefault(); scrollTo('top') }}><img className="brand-logo" src="/perfotec-logo.png" alt="PerfoTec" /></a><p>Concept direction: a clearer buyer journey for PerfoTec’s public solution ecosystem.</p><div className="footer-right"><a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={13} /></a><span>© 2026 PerfoTec</span></div></footer>
+      <footer className="footer"><a className="logo" href="#top" onClick={(event) => { event.preventDefault(); scrollTo('top') }}><img className="brand-logo" src={perfotecLogo} alt="PerfoTec" /></a><p>Concept direction: a clearer buyer journey for PerfoTec’s public solution ecosystem.</p><div className="footer-right"><a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={13} /></a><span>© 2026 PerfoTec</span></div></footer>
 
       {modalOpen && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label="Contact PerfoTec"><div className="modal"><button className="modal-close" aria-label="Close form" onClick={() => setModalOpen(false)}><X /></button>{submitted ? <div className="success"><div className="success-symbol"><Check /></div><span className="small-label">Demo confirmation</span><h2>That’s a useful<br /><em>first step.</em></h2><p>This concept captures the inquiry locally for demonstration. Connect it to the PerfoTec inbox or CRM before production.</p><button className="button button-primary" onClick={() => setModalOpen(false)}>Back to the page <ArrowRight size={15} /></button></div> : <><span className="small-label">Start a conversation</span><h2>Tell us about<br /><em>the product.</em></h2><p className="modal-lede">A few details will help route your question to the right technical conversation.</p><form onSubmit={submitForm}><label>Name<input required name="name" placeholder="Your name" /></label><label>Work email<input required type="email" name="email" placeholder="you@company.com" /></label><label>What do you need?<select required name="interest" defaultValue=""><option value="" disabled>Select a path</option><option>I need advice</option><option>Shelf-life trials</option><option>Respiration analysis</option><option>Multi-Head Laser</option><option>O₂Control</option><option>Liners or pallet covers</option></select></label><label>Product / route / question<textarea required name="message" placeholder="Tell us what you are working with..."></textarea></label><button className="button button-primary submit" type="submit">Send inquiry <ArrowUpRight size={15} /></button></form></>}</div></div>}
     </div>
