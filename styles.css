@@ -12,7 +12,21 @@ a { color:inherit; text-decoration:none; }
 .announcement span { display:flex; align-items:center; gap:8px; }
 .pulse-dot { width:7px; height:7px; display:inline-block; border-radius:50%; background:var(--lime); box-shadow:0 0 0 4px rgba(182,207,98,.14); }
 .site-header { height:83px; padding:0 5.5vw; display:flex; align-items:center; justify-content:space-between; background:var(--cream); border-bottom:1px solid var(--line); position:relative; z-index:10; }
-.logo { display:flex; align-items:center; gap:11px; }\n.brand-logo { display:block; width:142px; height:auto; max-height:38px; object-fit:contain; object-position:left center; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-logo {
+  display: block;
+  width: 142px;
+  max-width: 142px;
+  height: auto;
+  max-height: 38px;
+  object-fit: contain;
+  object-position: left center;
+}
 .logo-symbol { width:33px; height:33px; border:1px solid var(--forest); border-radius:50%; display:grid; place-items:center; font:700 14px 'Playfair Display',serif; letter-spacing:-.05em; }
 .logo-symbol span { color:var(--orange); }
 .main-nav { display:flex; align-items:center; gap:30px; margin-left:10%; }
